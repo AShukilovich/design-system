@@ -1,0 +1,21 @@
+@import 'theme_color_project-default';
+@import 'theme_color_project-inverse';
+@import 'theme_color_project-warning';
+@import 'theme_color_project-brand';
+@import 'theme_color_megafon-brand';
+
+.theme {
+	@each $size, $value in $sizes-text {
+		.theme_size_#{$size} {
+			font-size: nth($list: $value, $n: 1);
+			line-height: nth($list: $value, $n: 2);
+		}
+	}
+
+	@each $size, $value in $extended_map_space {
+		.theme_space_#{$size} {
+			margin-top: $value;
+			margin-bottom: $value;
+		}
+	}
+}

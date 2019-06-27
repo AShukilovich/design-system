@@ -1,0 +1,39 @@
+.icon-plus {
+	display: flex;
+}
+
+//icon
+.icon-plus__icon {
+	flex: 0 0 50px;
+	max-width: 50px;
+	height: 50px;
+	background-color: $color-primary-text;
+}
+
+.icon-plus__icon_indent-r_s {
+	margin-right: map-get($map: $map_space, $key: 's');
+	background-color: $color-primary-text;
+}
+
+.icon-plus__icon_indent-r_m {
+	margin-right: map-get($map: $map_space, $key: 'm');
+	background-color: $color-primary-text;
+}
+
+.icon-plus__icon_indent-l_l {
+	margin-left: map-get($map: $map_space, $key: 'l');
+	background-color: $color-primary-text;
+}
+
+.icon-plus_vertical-align_center {
+	display: flex;
+	align-items: center;
+}
+
+// block
+.icon-plus__block {
+	display: flex;
+	align-items: center;
+	flex-grow: 1;
+	min-height: 50px
+}

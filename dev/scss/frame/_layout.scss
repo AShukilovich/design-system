@@ -1,0 +1,37 @@
+.container {
+	width: 100%;
+}
+
+.container_align_center {
+	margin-right: auto;
+	margin-left: auto;
+}
+
+// width container
+.container_size_s {
+	max-width: 880px;
+}
+
+.container_size_m {
+	max-width: 1144px;
+}
+
+// vertical padding
+.container_space-v_xxxxl {
+	padding-top: map-get($map: $extended_map_space, $key: 'xxxxl');
+	padding-bottom: map-get($map: $extended_map_space, $key: 'xxxxl');
+}
+
+.container_space-v_xxxxxl {
+	padding-top: map-get($map: $extended_map_space, $key: 'xxxxxl');
+	padding-bottom: map-get($map: $extended_map_space, $key: 'xxxxxl');
+}
+
+// margin bottom
+.container_indent-b_xxl {
+	margin-bottom: map-get($map: $extended_map_space, $key: 'xxl');
+}
+
+.container_indent-b_xxxxl {
+	margin-bottom: map-get($map: $extended_map_space, $key: 'xxxxl');
+}

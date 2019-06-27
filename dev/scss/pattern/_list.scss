@@ -1,0 +1,66 @@
+.list {}
+
+.list_border_all {
+	border: 1px solid $color-border;
+}
+
+.list_view_default {
+	background-color: $color-default;
+}
+
+// item
+.list__item {}
+
+.list__item_border_bottom {
+	border-bottom: 1px solid $color-border;
+
+	&:last-of-type {
+		border-bottom: none;
+	}
+}
+
+.list__item_border_top {
+	border-top: 1px solid $color-border;
+	
+	&:first-of-type {
+		border-top: none;
+	}
+}
+
+.list__item_vertical-align_center {
+	display: flex;
+	align-items: center;
+}
+
+.list__item_distribute_between {
+	display: flex;
+	justify-content: space-between;
+}
+
+.list__item_indent-t_m {
+	margin-top: map-get($map: $map_space, $key: 'm');
+}
+
+.list__item_indent-b_s {
+	margin-bottom: map-get($map: $map_space, $key: 's');
+}
+
+.list__item_indent-b_m {
+	margin-bottom: map-get($map: $map_space, $key: 's');
+}
+
+.list__item_indent-b_l {
+	margin-bottom: map-get($map: $map_space, $key: 'l');
+}
+
+.list__item_indent-b_xl {
+	margin-bottom: map-get($map: $map_space, $key: 'xl');
+}
+
+.list__item_space-b_s {
+	padding-bottom: map-get($map: $map_space, $key: 's');
+}
+
+.list__item_space-a_l {
+	padding: map-get($map: $map_space, $key: 'l');
+}		

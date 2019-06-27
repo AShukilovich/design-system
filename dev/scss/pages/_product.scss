@@ -1,0 +1,12 @@
+.product {
+	min-height: 280px;
+
+	&[class*="border_"],
+	[class*="border_"] {
+		border-width: 3px;
+	}
+
+	.image {
+		min-height: 160px;
+	}
+}

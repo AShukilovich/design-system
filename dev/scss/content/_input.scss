@@ -1,0 +1,10 @@
+.input {
+	flex-grow: 1;
+	border: 3px solid $color-border;
+
+	@each $size_title, $size_value in $input_size {
+		&.input_size_#{$size_title} {
+			height: $size_value;
+		}
+	}
+}

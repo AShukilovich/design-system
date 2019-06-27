@@ -1,0 +1,67 @@
+.grid {
+	display: grid;
+}
+
+	// columns
+.grid_m-columns_10 {
+	grid-template-columns: repeat(10, 1fr);
+}
+
+.grid_m-columns_12 {
+	grid-template-columns: repeat(12, 1fr);
+}
+
+// columns gap
+.grid_col-gap_two-thirds {
+	grid-column-gap: 2 * map-get($map: $extended_map_space, $key: 'xxxl') / 3;
+}
+
+.grid_col-gap_full {
+	grid-column-gap: map-get($map: $extended_map_space, $key: 'xxxl');
+}
+
+.grid_col-gap_half {
+	grid-column-gap: map-get($map: $extended_map_space, $key: 'xxxl') / 2;
+}
+
+@media screen and (max-width: $desktop - 1) {
+	.grid_col-gap_two-thirds {
+		grid-column-gap: 2 * map-get($map: $extended_map_space, $key: 'm') / 3;
+	}
+
+	.grid_col-gap_full {
+		grid-column-gap: map-get($map: $extended_map_space, $key: 'm');
+	}
+
+	.grid_col-gap_half {
+		grid-column-gap: map-get($map: $extended_map_space, $key: 'm') / 2;
+	}
+}
+
+// row gap 
+.grid_row-gap_full {
+	grid-row-gap: map-get($map: $extended_map_space, $key: 'xxxl');
+}
+
+.grid_row-gap_half {
+	grid-row-gap: map-get($map: $extended_map_space, $key: 'xxxl') / 2;
+}
+
+@media screen and (max-width: $desktop) {
+	.grid_row-gap_full {
+		grid-row-gap: map-get($map: $extended_map_space, $key: 'm');
+	}
+
+	.grid_row-gap_half {
+		grid-row-gap: map-get($map: $extended_map_space, $key: 'm') / 2;
+	}
+}
+
+// fraction
+.fraction {}
+
+@each $size in $size-fraction {
+	.fraction_m-col_#{$size} {
+		grid-column: auto / span $size;
+	}
+}

@@ -1,0 +1,92 @@
+$text-type: (
+	h1: 15px 0 21px,
+	h2: 48px 0 20px,
+	h3: 43px 0 0,
+	p: 15px 0 21px
+);
+
+.text {
+  display: flex;
+	flex-wrap: wrap;
+	
+	&.text_align_center {
+		justify-content: center;
+		text-align: center;
+	}
+
+	@each $size, $value in $sizes-text-extended {
+		&.text_size_#{$size} {
+			font-size: nth($list: $value, $n: 1);
+			line-height: nth($list: $value, $n: 2);
+			
+			.text__word {
+				$height: nth($list: $value, $n: 1);
+				$offset-v: ( nth($list: $value, $n: 2) - nth($list: $value, $n: 1) ) / 2;
+
+				&.text__word_width_s {
+					width: nth($list: $value, $n: 3);
+					height: $height;
+					margin-top: $offset-v;
+					margin-bottom: $offset-v;
+				}
+
+				&.text__word_width_m {
+					width: nth($list: $value, $n: 4);
+					height: $height;
+					margin-top: $offset-v;
+					margin-bottom: $offset-v;
+				}
+
+				&.text__word_width_l {
+					width: nth($list: $value, $n: 5);
+					height: $height;
+					margin-top: $offset-v;
+					margin-bottom: $offset-v;
+				}
+			}
+		}
+	}
+
+	@each $type, $margin in $text-type {
+		&.text_type_#{$type} {
+			margin: $margin;
+		}
+	}
+
+	&.text_view_primary {
+		color: $color-primary-text;
+
+		.text__word {
+			background-color: $color-primary-text;
+		}
+	}
+
+	&.text_view_secondary {
+		color: $color-secondary-text;
+
+		.text__word {
+			background-color: $color-secondary-text;
+		}
+	}
+
+	&.text_view_ghost {
+		color: $color-ghost-text;
+
+		.text__word {
+			background-color: $color-ghost-text;
+		}
+	}
+
+	&.text_view_link {
+		color: $color-link-text;
+
+		.text__word {
+			background-color: $color-link-text;
+		}
+	}
+
+	.text__word {
+		display: inline-block;
+		margin-right: 5px;
+	}
+}

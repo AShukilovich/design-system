@@ -1,0 +1,18 @@
+button,
+.button {
+	background-color: $color-accent;
+	width: 100%;
+	max-width: $button-width;
+
+	@each $size-title, $size-value in $button-height {
+		&.button_size_#{$size-title} {
+			height: $size-value;
+			background-color: $color-accent;
+		}
+	}
+
+	&.button_width_full {
+		max-width: 100%;
+		background-color: $color-accent;
+	}
+}

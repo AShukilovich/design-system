@@ -1,0 +1,22 @@
+.theme_color_project-brand {
+	$color-default: #0070f0;
+	$color-accent: #FFFFFF;
+	$color-border: #FFFFFF;
+
+	$color-primary-text: #FFFFFF;
+	$color-secondary-text: rgba(255, 255, 255, 0.6);
+	$color-ghost-text: rgba(255, 255, 255, 0.3);
+	$color-link-text: #FFFFFF;
+	
+	@import '../pattern/card';
+	@import '../pattern/form';
+	@import '../pattern/informer';
+	@import '../pattern/list';
+	@import '../pattern/icon-plus';
+	@import '../content/text';
+	@import '../content/avatar';
+	@import '../content/placeholder';
+	@import '../content/button';
+	@import '../content/input';
+	@import 'content/image';
+}
