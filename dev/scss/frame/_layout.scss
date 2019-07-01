@@ -1,4 +1,5 @@
-.container {
+.container,
+[class*="container_"] {
 	width: 100%;
 }
 
@@ -18,20 +19,20 @@
 
 // vertical padding
 .container_space-v_xxxxl {
-	padding-top: map-get($map: $extended_map_space, $key: 'xxxxl');
-	padding-bottom: map-get($map: $extended_map_space, $key: 'xxxxl');
+	padding-top: map-get($map: $theme_space_default, $key: 'xxxxl');
+	padding-bottom: map-get($map: $theme_space_default, $key: 'xxxxl');
 }
 
 .container_space-v_xxxxxl {
-	padding-top: map-get($map: $extended_map_space, $key: 'xxxxxl');
-	padding-bottom: map-get($map: $extended_map_space, $key: 'xxxxxl');
+	padding-top: map-get($map: $theme_space_default, $key: 'xxxxxl');
+	padding-bottom: map-get($map: $theme_space_default, $key: 'xxxxxl');
 }
 
 // margin bottom
 .container_indent-b_xxl {
-	margin-bottom: map-get($map: $extended_map_space, $key: 'xxl');
+	margin-bottom: map-get($map: $theme_space_default, $key: 'xxl');
 }
 
 .container_indent-b_xxxxl {
-	margin-bottom: map-get($map: $extended_map_space, $key: 'xxxxl');
+	margin-bottom: map-get($map: $theme_space_default, $key: 'xxxxl');
 }

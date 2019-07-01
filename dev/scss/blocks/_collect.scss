@@ -1,0 +1,44 @@
+.collect	{
+	min-height: 380px;
+
+	&[class*="border_"],
+	[class*="border_"] {
+		border-width: 3px;
+	}
+
+	.collect__image {
+		.image {
+			height: 160px;
+			border-color: transparent
+		}
+	}
+
+	.collect__progress {
+		border-bottom: 3px solid #fff;
+
+		.collect__done {
+			height: 8px;
+			width: 0%;
+			background-color: var(--color-default);
+			transition: .25s;
+
+			&.collect__done_size_one-third {
+				width: $one-third * 100%;
+			}
+
+			&.collect__done_size_half {
+				width: $half * 100%;
+			}
+
+			&.collect__done_size_two-third {
+				width: $two-third * 100%;
+			}
+		}
+	}
+
+	.collect__footer {
+		.text_size_l {
+			margin-bottom: map-get($map: $theme_space_default-short, $key: 's');
+		}
+	}
+}

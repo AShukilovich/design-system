@@ -1,0 +1,10 @@
+.offer {
+	min-height: 408px;
+
+	.offer__footer {
+		.text_view_ghost,
+		.text_view_ghost {
+			margin-bottom: map-get($map: $theme_space_default, $key: 'xs');
+		}
+	}
+}

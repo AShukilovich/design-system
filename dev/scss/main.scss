@@ -5,12 +5,33 @@
 @import 'frame/layout';
 @import 'frame/grid';
 
+@import 'pattern/card';
+@import 'pattern/form';
+@import 'pattern/informer';
+@import 'pattern/list';
+@import 'pattern/icon-plus';
 @import 'pattern/section';
+@import 'pattern/e-accordion';
 
 @import 'content/brand-logo';
+@import 'content/text';
+@import 'content/avatar';
+@import 'content/placeholder';
+@import 'content/button';
+@import 'content/input';
+@import 'content/image';
 
-@import 'pages/payment';
-@import 'pages/warning';
-@import 'pages/product';
-@import 'pages/history';
-@import 'pattern/e-accordion';
+@import 'blocks/payment';
+@import 'blocks/warning';
+@import 'blocks/product';
+@import 'blocks/history';
+@import 'blocks/commercial';
+@import 'blocks/cover';
+@import 'blocks/collect';
+@import 'blocks/articles';
+@import 'blocks/offer';
+@import 'blocks/subscription';
+@import 'blocks/event';
+@import 'blocks/header';
+@import 'blocks/onoffswitch';
+@import 'blocks/footer';

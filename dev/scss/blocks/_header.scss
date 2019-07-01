@@ -1,0 +1,12 @@
+.header {
+	display: flex;
+	justify-content: space-between;
+	margin-top: map-get($map: $theme_space_default, $key: 'xxxl');
+	margin-bottom: map-get($map: $theme_space_default, $key: 'xxxl');
+
+	.header__logo {
+		width: 179px;
+		height: 34px;
+		background-color: var(--color-primary-text);
+	}
+}

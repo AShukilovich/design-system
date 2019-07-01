@@ -1,0 +1,9 @@
+.footer {
+	margin-top: map-get($map: $theme_space_default, $key: 'xxxl');
+	margin-bottom: map-get($map: $theme_space_default, $key: 'xxxl');
+
+	.footer__content {
+		display: flex;
+		justify-content: space-between;
+	}
+}

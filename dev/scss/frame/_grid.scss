@@ -1,4 +1,4 @@
-.grid {
+[class*="grid"] {
 	display: grid;
 }
 
@@ -13,47 +13,47 @@
 
 // columns gap
 .grid_col-gap_two-thirds {
-	grid-column-gap: 2 * map-get($map: $extended_map_space, $key: 'xxxl') / 3;
+	grid-column-gap: $two-third * map-get($map: $theme_space_default, $key: 'xxxl');
 }
 
 .grid_col-gap_full {
-	grid-column-gap: map-get($map: $extended_map_space, $key: 'xxxl');
+	grid-column-gap: map-get($map: $theme_space_default, $key: 'xxxl');
 }
 
 .grid_col-gap_half {
-	grid-column-gap: map-get($map: $extended_map_space, $key: 'xxxl') / 2;
+	grid-column-gap: $half * map-get($map: $theme_space_default, $key: 'xxxl');
 }
 
-@media screen and (max-width: $desktop - 1) {
+@media only screen and (max-width: $desktop - 1) {
 	.grid_col-gap_two-thirds {
-		grid-column-gap: 2 * map-get($map: $extended_map_space, $key: 'm') / 3;
+		grid-column-gap: $two-third * map-get($map: $theme_space_default, $key: 'm');
 	}
 
 	.grid_col-gap_full {
-		grid-column-gap: map-get($map: $extended_map_space, $key: 'm');
+		grid-column-gap: map-get($map: $theme_space_default, $key: 'm');
 	}
 
 	.grid_col-gap_half {
-		grid-column-gap: map-get($map: $extended_map_space, $key: 'm') / 2;
+		grid-column-gap: $half * map-get($map: $theme_space_default, $key: 'm');
 	}
 }
 
 // row gap 
 .grid_row-gap_full {
-	grid-row-gap: map-get($map: $extended_map_space, $key: 'xxxl');
+	grid-row-gap: map-get($map: $theme_space_default, $key: 'xxxl');
 }
 
 .grid_row-gap_half {
-	grid-row-gap: map-get($map: $extended_map_space, $key: 'xxxl') / 2;
+	grid-row-gap: $half * map-get($map: $theme_space_default, $key: 'xxxl');
 }
 
-@media screen and (max-width: $desktop) {
+@media only screen and (max-width: $desktop - 1) {
 	.grid_row-gap_full {
-		grid-row-gap: map-get($map: $extended_map_space, $key: 'm');
+		grid-row-gap: map-get($map: $theme_space_default, $key: 'm');
 	}
 
 	.grid_row-gap_half {
-		grid-row-gap: map-get($map: $extended_map_space, $key: 'm') / 2;
+		grid-row-gap: $half * map-get($map: $theme_space_default, $key: 'm');
 	}
 }
 

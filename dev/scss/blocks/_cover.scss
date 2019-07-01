@@ -1,0 +1,17 @@
+.cover {
+	height: 408px;
+
+	.cover__preview {
+		padding-bottom: 0;
+
+		.image {
+			height: 180px;
+		}
+	} 
+
+	.cover__info {
+		padding-top: 0;
+		padding-bottom: 0;
+		margin-top: map-get($map: $theme_space_default-short, $key: 'm');
+	}
+}

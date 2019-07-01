@@ -1,0 +1,26 @@
+.commercial	{
+	min-height: 430px;
+
+	&[class*="border_"],
+	[class*="border_"] {
+		border-width: 3px;
+	}
+
+	.image {
+		height: 180px;
+	}
+
+	.navigation {
+		margin-top: map-get($map: $theme_space_default-short, $key: 's');
+		
+		.page-button {
+			width: 8px;
+			height: 8px;
+			background-color: #fff;
+
+			&:not(:last-of-type) {
+				margin-right: map-get($map: $theme_space_default, $key: 'xs');
+			}
+		}
+	}
+}

@@ -1,42 +1,39 @@
 .informer {
 	display: flex;
 	flex-wrap: wrap;
-	background-color: $color-default;
+	background-color: var(--color-default);
 }
+
 .informer_view_default {
-	background-color: $color-default;
+	background-color: var(--color-default);
 }
 
 // informer content
 .informer__content {
 	display: flex;
 	flex-wrap: wrap;
-	background-color: $color-default;
+	background-color: var(--color-default);
 }
 
 .informer__content_distribute_default {
 	justify-content: flex-start;
-	background-color: $color-default;
 }
 
 .informer__content_distribute_between {
 	justify-content: space-between;
-	background-color: $color-default;
 }
 
 .informer__content_distribute_center {
 	justify-content: center;
-	background-color: $color-default;
 }
 
 .informer__content_space-a_xl {
-	padding: map-get($map: $map_space, $key: 'xl');
-	background-color: $color-default;
+	padding: map-get($map: $theme_space_default-short, $key: 'xl');
 }
 
 .informer__content_space-a_xxl {
-	padding: map-get($map: $map_space, $key: 'xxl');
-	background-color: $color-default;
+	padding: map-get($map: $theme_space_default-short, $key: 'xxl');
+	background-color: var(--color-default);
 }
 
 // action
@@ -58,9 +55,9 @@
 }
 
 .informer__action_space-a_xl {
-	padding: map-get($map: $map_space, $key: 'xl');
+	padding: map-get($map: $theme_space_default-short, $key: 'xl');
 }
 
 .informer__action_space-a_xxl {
-	padding: map-get($map: $map_space, $key: 'xxl');
+	padding: map-get($map: $theme_space_default-short, $key: 'xxl');
 }

@@ -5,7 +5,11 @@ $text-type: (
 	p: 15px 0 21px
 );
 
-.text {
+.text,
+[class*="text_align_"],
+[class*="text_size_"],
+[class*="text_type_"],
+[class*="text_view_"] {
   display: flex;
 	flex-wrap: wrap;
 	
@@ -14,7 +18,7 @@ $text-type: (
 		text-align: center;
 	}
 
-	@each $size, $value in $sizes-text-extended {
+	@each $size, $value in $theme_size_default {
 		&.text_size_#{$size} {
 			font-size: nth($list: $value, $n: 1);
 			line-height: nth($list: $value, $n: 2);
@@ -54,39 +58,38 @@ $text-type: (
 	}
 
 	&.text_view_primary {
-		color: $color-primary-text;
+		color: var(--color-primary-text);
 
 		.text__word {
-			background-color: $color-primary-text;
+			background-color: var(--color-primary-text);
 		}
 	}
 
 	&.text_view_secondary {
-		color: $color-secondary-text;
+		color: var(--color-secondary-text);
 
 		.text__word {
-			background-color: $color-secondary-text;
+			background-color: var(--color-secondary-text);
 		}
 	}
 
 	&.text_view_ghost {
-		color: $color-ghost-text;
+		color: var(--color-ghost-text);
 
 		.text__word {
-			background-color: $color-ghost-text;
+			background-color: var(--color-ghost-text);
 		}
 	}
 
 	&.text_view_link {
-		color: $color-link-text;
+		color: var(--color-link-text);
 
 		.text__word {
-			background-color: $color-link-text;
+			background-color: var(--color-link-text);
 		}
 	}
 
 	.text__word {
 		display: inline-block;
-		margin-right: 5px;
 	}
 }

@@ -1,18 +1,20 @@
-.brand-logo {
-	display: inline-block;
+.brand-logo,
+[class*="brand-logo_name_"],
+[class*="brand-logo_size_"] {
+	display: block;
 	width: 100%;
 	height: 100%;
-	
-	@each $name-brand, $color in $brands-colors {
-		&.brand-logo_name_#{$name-brand} {
-			background-color: $color;
-		}
-	}
+}
 
-	@each $size-title, $sizes in $brands-logo-sizes {
-		&.brand-logo_name_#{$size-title} {
-			width: nth($list: $sizes, $n: 1);
-			height: nth($list: $sizes, $n: 2);
-		}
+@each $name-brand, $color in $brands-colors {
+	&.brand-logo_name_#{$name-brand} {
+		background-color: $color;
+	}
+}
+
+@each $size-title, $sizes in $brands-logo-sizes {
+	&.brand-logo_size_#{$size-title} {
+		width: nth($list: $sizes, $n: 1);
+		height: nth($list: $sizes, $n: 2);
 	}
 }

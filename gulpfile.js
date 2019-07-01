@@ -11,8 +11,7 @@ var pathProd = 'app',
 	notify = require('gulp-notify'),
 	del = require('del'),
 	cache = require('gulp-cache'),
-	concat = require('gulp-concat'),
-	babel = require('gulp-babel');
+	concat = require('gulp-concat');
 
 const isDev = !process.env.NODE_ENV || process.env.NODE_ENV == 'development';
 
@@ -35,7 +34,7 @@ gulp.task('sass', function() {
 	.pipe(sass({outputStyle: 'compressed'}))
 		.on('error', notify.onError(function (err) {
 			return {
-				title: 'Styles',
+				title: 'scss',
 				message: err.message
 			}
 		}))
@@ -48,17 +47,15 @@ gulp.task('sass', function() {
 
 gulp.task('js', function() {
 	return gulp.src([
-			'./dev/scripts/accordion.js'
+			'./dev/scripts/accordion.js',
+			'./dev/scripts/onoffswitch.js',
 		])
 		.pipe(concat('js/all-scripts.js'))
-		.pipe(babel({
-            presets: ['@babel/env']
-        }))
 		.pipe(gulp.dest(pathProd))
 		.pipe(reload({ stream: true }));
 });
 
-gulp.task('serve', function() {
+gulp.task('server', function() {
 	browserSync({
 		server: {
 			baseDir: pathProd
@@ -69,9 +66,9 @@ gulp.task('serve', function() {
 
 gulp.task('build', ['clean', 'sass', 'js', 'html']);
 
-gulp.task('watch', ['serve', 'sass', 'js', 'html'], function() {
-	gulp.watch('dev/sсss/**/*.scss', ['sass'], function(event, cb) {
-        setTimeout(function(){gulp.start('sass');}, 50)
+gulp.task('watch', ['server', 'sass', 'js', 'html'], function() {
+	gulp.watch(['dev/scss/*.scss', 'dev/scss/**/*.scss'], ['sass'],function(event, cb) {
+        setTimeout(function(){gulp.start('sass');}, 50) // задача выполниться через 50 миллисекунд и файл успеет сохраниться на диске
     });
 	gulp.watch('dev/scripts/*.js', ['js']);
 	gulp.watch('dev/*.html', ['html']);

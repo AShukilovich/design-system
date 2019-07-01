@@ -1,8 +1,8 @@
 .avatar {
-	background-color: $color-default;
+	background-color: var(--color-default);
 
 	&.avatar_size_m {
-		background-color: $color-default;
+		background-color: var(--color-default);
 		width: 60px;
 		height: 60px;
 	}

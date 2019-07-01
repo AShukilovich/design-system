@@ -1,26 +1,26 @@
-.image {
+.image,
+.image__placeholder {
 	position: relative;
 	width: 100%;
 	max-width: 100%;
 	height: auto;
 	z-index: 2;
-	border: 3px solid $color-border;
+	border: 3px solid var(--color-border);
+}
 
-	&.image__placeholder {
-		display: block;
-		background-repeat: no-repeat;
-		background-position: center;
-		margin-left: auto;
-		margin-right: auto;
+.image__placeholder {
+	display: block;
+	background-repeat: no-repeat;
+	background-position: center;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: var(--color-default);
 
-		&-default {
-			background-image: $image-placeholder-default;
-			background-color: $color-default;
-		}
+	&-default {
+		background-image: $image-placeholder-default;
+	}
 
-		&-inverse {
-			background-image: $image-placeholder-inverse;
-			background-color: invert($color-default);
-		}
+	&-inverse {
+		background-image: $image-placeholder-inverse;
 	}
 }

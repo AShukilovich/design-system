@@ -1,6 +1,6 @@
 .input {
 	flex-grow: 1;
-	border: 3px solid $color-border;
+	border: 3px solid var(--color-border);
 
 	@each $size_title, $size_value in $input_size {
 		&.input_size_#{$size_title} {

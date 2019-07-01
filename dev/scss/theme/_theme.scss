@@ -5,17 +5,29 @@
 @import 'theme_color_megafon-brand';
 
 .theme {
-	@each $size, $value in $sizes-text {
+	@each $size, $value in $theme_size_default-short {
 		.theme_size_#{$size} {
 			font-size: nth($list: $value, $n: 1);
 			line-height: nth($list: $value, $n: 2);
 		}
 	}
 
-	@each $size, $value in $extended_map_space {
+	@each $size, $value in $theme_space_default {
 		.theme_space_#{$size} {
 			margin-top: $value;
 			margin-bottom: $value;
 		}
+	}
+}
+
+.theme_gap_small {
+	padding-right: map-get($map: $theme_space_default, $key: 'xxxl') / 2;
+	padding-left: map-get($map: $theme_space_default, $key: 'xxxl') / 2;
+}
+
+@media only screen and (max-width: $desktop - 1) {
+	.theme_gap_small {
+		padding-right: map-get($map: $theme_space_default, $key: 'm') / 2;
+		padding-left: map-get($map: $theme_space_default, $key: 'm') / 2;
 	}
 }

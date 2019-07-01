@@ -1,0 +1,8 @@
+.warning {
+	min-height: 335px;
+
+	.placeholder {
+		margin-top: map-get($map: $theme_space_default-short, $key: 'm');
+		margin-bottom: map-get($map: $theme_space_default-short, $key: 'm');
+	}
+}

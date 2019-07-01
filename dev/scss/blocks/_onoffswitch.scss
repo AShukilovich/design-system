@@ -1,0 +1,33 @@
+.onoffswitch {
+	.onoffswitch__toggle {
+		position: relative;
+		display: block;
+		width: 97px;
+		height: 32px;
+		border: 2px solid var(--color-border);
+		cursor: pointer;
+
+		&::before {
+			position: absolute;
+			top: 2px;
+			left: 2px;
+			width: 24px;
+			height: 24px;
+			background-color: var(--color-border);
+			content: "";
+			transition: .25s;
+		}
+	}
+
+	.onoffswitch__checkbox {
+		z-index: -1;
+		clip: rect(1px, 1px, 1px, 1px);
+		appearance: none;
+
+		&:checked + .onoffswitch__toggle {
+			&::before {
+				left: 67px;
+			}
+		}
+	}
+}

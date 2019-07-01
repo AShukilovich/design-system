@@ -1,8 +1,0 @@
-.warning {
-	min-height: 335px;
-
-	.placeholder {
-		margin-top: map-get($map: $map_space, $key: 'm');
-		margin-bottom: map-get($map: $map_space, $key: 'm');
-	}
-}

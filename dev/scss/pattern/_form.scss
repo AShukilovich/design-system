@@ -2,11 +2,11 @@ form,
 .form {}
 
 .form_border_all {
-	border: 3px solid $color-border;
+	border: 3px solid var(--color-border);
 }
 
 .form_view_default {
-	background-color: $color-default;
+	background-color: var(--color-default);
 }
 
 // item
@@ -16,7 +16,7 @@ form,
 }
 
 .form__item_border_bottom {
-	border-bottom: 3px solid $color-border;
+	border-bottom: 3px solid var(--color-border);
 
 	&:last-of-type {
 		border-bottom: none;
@@ -31,7 +31,7 @@ form,
 	align-items: center;
 }
 
-@each $size_title, $size_value in $map_space {
+@each $size_title, $size_value in $theme_space_default-short {
 	.form__item_indent-b_#{$size_title} {
 		margin-bottom: $size_value;
 	}

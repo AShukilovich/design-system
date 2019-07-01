@@ -1,0 +1,18 @@
+.articles {
+	.articles__pic {
+		.image {
+			width: 170px;
+			height: 120px;
+		}
+	}
+
+	.articles__content {
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+		
+		.text_view_link {
+			margin-top: map-get($map: $theme_space_default, $key: 'xs');
+		}
+	}
+}

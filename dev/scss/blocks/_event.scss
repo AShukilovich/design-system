@@ -1,0 +1,23 @@
+.event {
+	min-height: 333px;
+
+	.event__preview {
+		display: flex;
+		justify-content: center;
+	}
+
+	.event__speaker {
+		margin-right: map-get($map: $theme_space_default, $key: 'xs');
+		.brand-logo {
+			background-color: #fff;
+		}
+	}
+
+	.event__title {
+		margin-top: map-get($map: $theme_space_default-short, $key: 'xl');
+	}
+
+	.event__description {
+		margin-top: map-get($map: $theme_space_default-short, $key: 's');
+	}
+}

@@ -2,19 +2,19 @@ section,
 .section {}
 
 .section_indent-b_xxl {
-	margin-bottom: map-get($map: $map_space, $key: 'xxl');
+	margin-bottom: map-get($map: $theme_space_default-short, $key: 'xxl');
 }
 
 .section_indent-b_xxxxl {
-	margin-bottom: map-get($map: $extended_map_space, $key: 'xxxxl');
+	margin-bottom: map-get($map: $theme_space_default, $key: 'xxxxl');
 }
 
 .section_space-v_xxl {
-	padding-top: map-get($map: $map_space, $key: 'xxl');
-	padding-bottom: map-get($map: $map_space, $key: 'xxl');
+	padding-top: map-get($map: $theme_space_default-short, $key: 'xxl');
+	padding-bottom: map-get($map: $theme_space_default-short, $key: 'xxl');
 }
 
 .section_space-v_xxxxl {
-	padding-top: map-get($map: $extended_map_space, $key: 'xxxxl');
-	padding-bottom: map-get($map: $extended_map_space, $key: 'xxxxl');
+	padding-top: map-get($map: $theme_space_default, $key: 'xxxxl');
+	padding-bottom: map-get($map: $theme_space_default, $key: 'xxxxl');
 }

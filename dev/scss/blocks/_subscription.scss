@@ -1,0 +1,7 @@
+.subscription {
+	min-height: 408px;
+
+	.subscribtion__title {
+		margin-bottom: map-get($map: $theme_space_default-short, $key: 'xl');
+	}
+}
