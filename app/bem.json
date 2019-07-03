@@ -1,0 +1,61 @@
+{
+	"block": "products",
+	"content": [
+		{
+			"block": "product-container",
+			"mix": [
+				{ "block": "container", "mods": {	"size": "s", "align": "center", "indent-b": "xxl" } },
+				{ "block": "grid", "mods": { "m-columns": "12" } }
+			],
+			"content": [
+				{
+					"block": "product",
+					"mix": [
+						{ "block": "card", "mods": {	"view": "default", "border": "all", "indent-b": "xxl" } },
+						{ "block": "fraction", "mods": {	"m-col": "3" } },
+						{ "block": "theme", "mods": {	"color": "project-default" } }
+					],
+					"content": [
+						{
+							"block": "product",
+							"elem": "content",
+							"mix": [
+								{ "block": "card", "elem": "content", "elemMods": { "space-a": "m" } }
+							],
+							"content": [
+								{
+									"block": "image",
+									"elem": "placeholder",
+									"elemMods": { "theme": "inverse" },
+									"mix": [
+										{ "block": "image" },
+										{ "block": "theme", "mods": { "color": "project-inverse" } }
+									]
+								}
+							]
+						},
+						{
+							"block": "product",
+							"elem": "footer",
+							"mix": [
+								{ "block": "card", "elem": "footer", "elemMods": { "space-a": "m" } }
+							],
+							"content": [
+								{
+									"block": "text",
+									"mods": { "view": "primary", "size": "s" },
+									"content": { "html": "<span class=\"text__word text__word_width_l\"></span>" }
+								},
+								{
+									"block": "text",
+									"mods": { "view": "primary", "size": "s" },
+									"content": { "html": "<span class=\"text__word text__word_width_m\"></span>" }
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

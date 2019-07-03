@@ -23,6 +23,14 @@ gulp.task('clearCache', function() {
 	return cache.clearAll();
 });
 
+gulp.task('json', function() {
+	return gulp.src([
+		'dev/*.json'
+	])
+	.pipe(gulp.dest(pathProd))
+	.pipe(reload({ stream: true }));
+});
+
 gulp.task('html', function() {
 	return gulp.src('dev/*.html')
 	.pipe(gulp.dest(pathProd))
@@ -49,6 +57,7 @@ gulp.task('js', function() {
 	return gulp.src([
 			'./dev/scripts/accordion.js',
 			'./dev/scripts/onoffswitch.js',
+			'./dev/scripts/layout-collector.js'
 		])
 		.pipe(concat('js/all-scripts.js'))
 		.pipe(gulp.dest(pathProd))
@@ -64,14 +73,15 @@ gulp.task('server', function() {
 	});
 });
 
-gulp.task('build', ['clean', 'sass', 'js', 'html']);
+gulp.task('build', ['clean', 'sass', 'js', 'html', 'json']);
 
-gulp.task('watch', ['server', 'sass', 'js', 'html'], function() {
+gulp.task('watch', ['server', 'sass', 'js', 'html', 'json'], function() {
 	gulp.watch(['dev/scss/*.scss', 'dev/scss/**/*.scss'], ['sass'],function(event, cb) {
         setTimeout(function(){gulp.start('sass');}, 50) // задача выполниться через 50 миллисекунд и файл успеет сохраниться на диске
     });
 	gulp.watch('dev/scripts/*.js', ['js']);
 	gulp.watch('dev/*.html', ['html']);
+	gulp.watch('dev/*.json', ['json']);
 });
 
 gulp.task('dev', ['build', 'watch']);

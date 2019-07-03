@@ -16,11 +16,11 @@
 	margin-right: auto;
 	background-color: var(--color-default);
 
-	&-default {
+	&_theme_default {
 		background-image: $image-placeholder-default;
 	}
 
-	&-inverse {
+	&_theme_inverse {
 		background-image: $image-placeholder-inverse;
 	}
 }
